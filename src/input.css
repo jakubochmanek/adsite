@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+#carousel {
+  transition: transform 0.5s ease-in-out;
+}
+
+input[type="radio"].radio-carousel {
+  appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-radio {
+  position: relative;
+  display: inline-block;
+}
+
+.radio-circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"].radio-carousel:checked + .radio-circle {
+  background-color: #0147ff;
+  border-color: #0147ff;
+}
+
+.radio-circle:hover {
+  background-color: lightblue;
+}
+
+.custom-bg {
+  background-image: url("image.png"); /* Ścieżka do obrazu */
+  background-size: 668.05px 659px; /* Ustawienie konkretnego rozmiaru */
+  background-position: right 80px top; /* Ustawienie położenia */
+  background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
+  /* padding: 180px; */
+}
 
 @tailwind base;
 @tailwind components;

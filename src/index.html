@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="w-auto h-20 border-2 py-4 flex flex-row justify-center">
-      <div class="w-10/12 flex flex-row justify-between items-center">
+  <body class="custom-bg">
+    <header class="w-auto h-20  py-4 flex flex-row justify-center">
+      <div class="w-full flex flex-row justify-between items-center px-28">
         <img class="h-max" src="logo.svg" alt="Logo CarsSpot" />
-        <nav class="flex flex-row gap-6">
-          <p class="h-max">Galeria Zdjęć</p>
+        <nav class="flex flex-row gap-6 font-robotoFlex font-normal">
+          <p class="h-max ">Galeria Zdjęć</p>
           <p class="h-max text-base">FAQ</p>
         </nav>
         <button
@@ -21,17 +21,17 @@
       </div>
     </header>
 
-    <main class="h-mainHeight w-auto py-28 pl-28 relative">
+    <main class="h-mainHeight w-auto py-28 pl-28 relative  ">
       <div class="h-mainContainerHeight w-10/12 flex flex-col justify-between">
-        <h1 class="w-600px font-bebas uppercase text-7xl text-customGrey">
+        <h1 class="w-576px font-bebas uppercase text-76px tracking-negative-4p leading-none text-customGrey">
           Sprzedajemy samochody z europy
         </h1>
-        <p class="w-80">
-          Kup komfortowy pojazd, aby każda podróż  była wyjątkowym przeżyciem.
+        <p class="w-80 font-robotoCondensed font-normal">
+          Kup komfortowy pojazd, aby każda podróż była wyjątkowym przeżyciem.
         </p>
-        <div class="flex flex-row gap-6">
+        <div class="flex flex-row gap-6 font-robotoFlex font-semibold">
           <button
-            class="bg-customBlue text-white py-3 px-6 rounded-lg font-semibold"
+            class="bg-customBlue text-white py-3 px-6 rounded-lg  "
           >
             Zobacz zdjęcia
           </button>
@@ -49,81 +49,113 @@
       />
     </main>
 
+    <!-- Gallery info -->
+
+    <div class="w-auto h-52 flex flex-col justify-between py-12 pl-28">
+      <div class="h-1/2 flex flex-col">
+        <p class="text-customBlue text-xl font-robotoCondensed font-normal">Prezentacja firmy</p>
+        <p class="font-bebas uppercase text-4xl">Zobacz naszą Galerię zdjęć</p>
+      </div>
+      <div class="flex flex-row gap-10 font-robotoFlex">
+        <button class="text-customBlue font-semibold underline">Samochody osobowe</button>
+        <button class="">Samochody dostawcze</button>
+      </div>
+    </div>
+
     <!-- Gallery -->
 
-    <div class="py-20 pl-24 flex flex-row gap-16">
-      <img
-        class="w-600px h-446px"
-        src="25d16da721f760a93a18014553e211f7.jpg"
-        alt="Red Alfa Romeo"
-      />
-      <img
-        class="w-600px h-446px"
-        src="a928544695dd2ac8e3ccfcdefa57038a.jpg"
-        alt="Black Maseratti"
-      />
-      <img
-        class="w-600px h-446px"
-        src="a3b1d015a8cf7e3b1fe4740e3d0a66ad.jpg"
-        alt="Black Audi"
-      />
-      <img
-        class="w-600px h-446px"
-        src="691cf59c31044b67d94d841d0721e76f.jpg"
-        alt=""
-      />
-      <img
-        class="w-600px h-446px"
-        src="502a78b2a74212338686fec1a03cb2be.jpg"
-        alt=""
-      />
+    <div
+      class="carousel-wrapper w-full overflow-x-hidden overflow-y-hidden mx-auto relative"
+    >
+      <div id="carousel" class="flex gap-16 pl-28 pb-14">
+        <img
+          class="w-[600px] h-[446px] flex-none"
+          src="25d16da721f760a93a18014553e211f7.jpg"
+          alt="Red Alfa Romeo"
+        />
+        <img
+          class="w-[600px] h-[446px] flex-none"
+          src="a928544695dd2ac8e3ccfcdefa57038a.jpg"
+          alt="Black Maseratti"
+        />
+        <img
+          class="w-[600px] h-[446px] flex-none"
+          src="a3b1d015a8cf7e3b1fe4740e3d0a66ad.jpg"
+          alt="Black Audi"
+        />
+        <img
+          class="w-[600px] h-[446px] flex-none"
+          src="502a78b2a74212338686fec1a03cb2be.jpg"
+          alt="Black Porsche"
+        />
+        <img
+          class="w-[600px] h-[446px] flex-none"
+          src="691cf59c31044b67d94d841d0721e76f.jpg"
+          alt="Road Speed Light"
+        />
+      </div>
     </div>
-    <div>
-      <input
-        class="checked:bg-customBlue border-customBlue"
-        type="radio"
-        checked="true"
-      />
-      <input type="radio" />
-      <input type="radio" />
-      <input type="radio" />
-      <input type="radio" />
+    <div class="flex justify-center gap-2 mt-4 pb-20">
+      <label class="custom-radio">
+        <input class="radio-carousel" type="radio" name="carousel" />
+        <span class="radio-circle"></span>
+      </label>
+      <label class="custom-radio">
+        <input class="radio-carousel" type="radio" name="carousel" />
+        <span class="radio-circle"></span>
+      </label>
+      <label class="custom-radio">
+        <input class="radio-carousel" type="radio" name="carousel" />
+        <span class="radio-circle"></span>
+      </label>
+      <label class="custom-radio">
+        <input class="radio-carousel" type="radio" name="carousel" />
+        <span class="radio-circle"></span>
+      </label>
+      <label class="custom-radio">
+        <input class="radio-carousel" type="radio" name="carousel" />
+        <span class="radio-circle"></span>
+      </label>
     </div>
 
+
+    
     <section
-      class="flex flex-row justify-between bg-customGrey py-20 px-28 text-white gap-10"
+      class="flex flex-row justify-between bg-customGrey py-20 px-32 text-white gap-10  "
     >
-      <div class="flex flex-col justify-between h-44">
-        <h3 class="font-bebas text-2xl">
+      <div class="flex flex-col justify-between h-44 ">
+        <h3 class="font-bebas text-2xl tracking-negative-3p">
           Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla
           commodo.
         </h3>
-        <p class="text-sm">
+        <p class="text-sm font-robotoCondensed">
           Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec
           egestas, nisl vehicula feugiat ornare, diam turpis efficitur mi, ac
           venenatis eros ipsum ac arcu. Vestibulum et [...]
         </p>
-        <button class="w-11">Rozwiń</button>
+        <button class="flex font-robotoCondensed">Rozwiń &#129131</button>
       </div>
-      <div class="flex flex-col justify-between h-44">
-        <h3 class="font-bebas text-2xl">
+      <div class="flex flex-col justify-between h-44 ">
+        <h3 class="font-bebas text-2xl tracking-negative-3p">
           Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla
           commodo.
         </h3>
-        <p class="text-sm">
+        <p class="text-sm font-robotoCondensed">
           Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec
           egestas, nisl vehicula feugiat ornare, diam turpis efficitur mi, ac
           venenatis eros ipsum ac arcu. Vestibulum et [...]
         </p>
-        <button class="w-11">Rozwiń</button>
+        <button class=" flex">Rozwiń &#129131</button>
       </div>
     </section>
 
     <footer
       class="py-6 px-28 bg-customGrey border-t border-white flex flex-row justify-between"
     >
-      <p class="font-bold text-white text-base">Cars Spot</p>
-      <p class="text-base text-white underline">Polityka prywatności</p>
+      <p class="font-bold text-white text-base font-robotoCondensed">Cars Spot</p>
+      <p class="text-base text-white underline font-robotoCondensed">Polityka prywatności</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
