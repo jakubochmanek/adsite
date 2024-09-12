@@ -1,11 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("carousel");
   const radios = document.querySelectorAll(".radio-carousel");
-
-  const imageWidth = 600 + 64; // 600px szerokości + 64px odstępu
   let currentIndex = 0;
 
-  // Obsługa kliknięcia na radio inputy
+  const fixedGapWidth = 8;
+
+  // Image width check
+  function getImageWidth() {
+    const image = carousel.querySelector("img");
+    const imageWidth = image.offsetWidth;
+
+    console.log("imageWidth:", imageWidth);
+    console.log("fixedGapWidth:", fixedGapWidth);
+
+    return imageWidth + 2 * fixedGapWidth;
+  }
+
+  function updateCarouselPosition() {
+    const imageWidth = getImageWidth();
+    const offset = -currentIndex * imageWidth;
+
+    console.log("imageWidth (with double gap):", imageWidth);
+    console.log("currentIndex:", currentIndex);
+    console.log("offset:", offset);
+
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Radio inputs change
   radios.forEach((radio, index) => {
     radio.addEventListener("change", () => {
       currentIndex = index;
@@ -13,12 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function updateCarouselPosition() {
-    const offset = -currentIndex * imageWidth;
-    carousel.style.transform = `translateX(${offset}px)`;
-  }
-
-  // Inicjalizacja stanu - zaznaczenie pierwszego radia
+  // First input set
   radios[0].checked = true;
   updateCarouselPosition();
+
+  window.addEventListener("resize", updateCarouselPosition);
 });

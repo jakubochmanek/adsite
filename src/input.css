@@ -38,11 +38,16 @@ input[type="radio"].radio-carousel:checked + .radio-circle {
 }
 
 .custom-bg {
-  background-image: url("image.png"); /* Ścieżka do obrazu */
-  background-size: 668.05px 659px; /* Ustawienie konkretnego rozmiaru */
-  background-position: right 80px top; /* Ustawienie położenia */
-  background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
-  /* padding: 180px; */
+  background-image: url("image.png");
+  background-size: 668px 659px;
+  background-position: right 80px top;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1280px) {
+  .custom-bg {
+    background-size: cover;
+  }
 }
 
 @tailwind base;
